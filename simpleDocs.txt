@@ -1,0 +1,59 @@
+整的差不多了再弄体面些的文档，这大概是个随笔。
+
+——————————————————————————————————
+
+这里主要介绍仓库的结构设计，客户端如何访问仓库，以及如何正确设置仓库。
+
+################
+self.json
+################
+
+文件内容介绍：
+
+format_version [ major, minor, revision ]
+name 显示在客户端仓库列表中的名称
+identifier 设定后不可变动，仓库唯一uuid识别（镜像仓库也有独立的uuid）
+status
+	0 正常服务
+	1 维护中
+	2 停止服务，即将关闭。客户端将出现删除此repo的选项
+type
+	1 源仓库
+	2 镜像仓库
+description 仓库简介
+root 源仓库需要有且需要填写的字段
+	allowMirror 是否允许镜像
+	branches 分支，资源类型
+		[0] name 分支名字
+		[0] broadcast 是否允许客户端使用此分支
+		[0] resource 资源文件下载链接
+multi 其他功能
+	SpeedTest 测速功能
+		enable 是否允许客户端对本仓库主动测速
+		file 测速文件下载链接
+
+其他介绍：
+
+1. 链接
+支持不同的协议，写法也较多样。
+例：
+	如root.branches[0].resource，
+	写 test.db 将会在 <此仓库基链接>/branches/test.db 下载文件
+	也可以指定协议，
+	目前支持 http(s), lanzou
+	如 https://www.example.com/test.db
+	或 lanzou://wqj8zhd
+	带提取码的蓝奏盘解析目前还有点奇怪问题，故暂不支持
+
+2. 测速
+开启（推荐）有助于改善用户体验，而且对您的仓库利大于弊
+利
+	减少低速链接带来的资源浪费
+	提升客户对您仓库的整体评价
+弊
+	如果你比较吝惜带宽资源（那其实你不应该公开仓库的）
+	如果你的机器不能胜任巨大的请求量（那其实你不应该公开仓库的）
+
+3. 链接缩写（如果缩写）
+root.branches[0].resource	以   <此仓库基链接>/branches/	为基
+multi.SpeedTest.file		以   <此仓库基链接>/multi/	为基

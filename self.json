@@ -1,0 +1,24 @@
+{
+    "format_version": [ 1, 0, 0 ],
+    "name": "Github Testing Repo",
+    "identifier": "2ae709c3-31c2-41cc-8ced-4686faaabae9",
+    "status": 0,
+    "type": 1,
+    "description": "testing",
+    "root": {
+        "allow_mirror": true,
+        "branches": [
+            {
+                "name": "测试分支",
+                "broadcast": true,
+                "resource": "test.db"
+            }
+        ]
+    },
+    "multi": {
+        "SpeedTest": {
+            "enable": true,
+            "file": "10M.speedtest"
+        }
+    }
+}
