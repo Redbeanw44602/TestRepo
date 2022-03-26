@@ -7,9 +7,9 @@
     "description": "testing",
     "root": {
         "allow_mirror": true,
-        "branches": [
+        "classes": [
             {
-                "name": "测试分支",
+                "name": "测试分类",
                 "broadcast": true,
                 "resource": "test.db"
             }

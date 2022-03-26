@@ -23,10 +23,10 @@ type
 description 仓库简介
 root 源仓库需要有且需要填写的字段
 	allowMirror 是否允许镜像
-	branches 分支，资源类型
-		[0] name 分支名字
-		[0] broadcast 是否允许客户端使用此分支
-		[0] resource 资源文件下载链接
+	classes 资源类型
+		[0] name 分类名字
+		[0] broadcast 是否允许客户端使用此分类
+		[0] resource 分类的资源文件下载链接
 multi 其他功能
 	SpeedTest 测速功能
 		enable 是否允许客户端对本仓库主动测速
