@@ -3,14 +3,13 @@
     "name": "Github Testing Repo",
     "identifier": "2ae709c3-31c2-41cc-8ced-4686faaabae9",
     "status": 0,
-    "type": 1,
     "description": "testing",
     "root": {
-        "allow_mirror": true,
         "classes": [
             {
                 "name": "测试分类",
                 "broadcast": true,
+                "last_updated": 114514,
                 "resource": "test.db"
             }
         ]
