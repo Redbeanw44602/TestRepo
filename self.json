@@ -1,5 +1,5 @@
 {
-    "format_version": [ 1, 0, 0 ],
+    "format_version": 100,
     "name": "Github Testing Repo",
     "identifier": "2ae709c3-31c2-41cc-8ced-4686faaabae9",
     "status": 0,
