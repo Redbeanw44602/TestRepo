@@ -34,7 +34,7 @@ multi 其他功能
 支持不同的协议，写法也较多样。
 例：
 	如root.branches[0].resource，
-	写 test.db 将会在 <此仓库基链接>/branches/test.db 下载文件
+	写 test.db 将会在 <此仓库基链接>/classes/test.db 下载文件
 	也可以指定协议，
 	目前支持 http(s), lanzou
 	如 https://www.example.com/test.db
@@ -51,5 +51,5 @@ multi 其他功能
 	如果你的机器不能胜任巨大的请求量（那其实你不应该公开仓库的）
 
 3. 链接缩写（如果缩写）
-root.branches[0].resource	以   <此仓库基链接>/branches/	为基
+root.branches[0].resource	以   <此仓库基链接>/classes/	为基
 multi.SpeedTest.file		以   <此仓库基链接>/multi/	为基
