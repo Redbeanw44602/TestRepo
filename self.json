@@ -15,6 +15,10 @@
         ]
     },
     "multi": {
+        "PdbHashTable": {
+            "enable": true,
+            "file": "pdb.json"
+        },
         "SpeedTest": {
             "enable": true,
             "file": "10M.speedtest"
