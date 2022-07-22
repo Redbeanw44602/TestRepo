@@ -5,12 +5,18 @@
     "status": 0,
     "description": "testing",
     "root": {
-        "classes": [
+        "groups": [
             {
-                "name": "测试分类",
-                "broadcast": true,
-                "last_updated": 114514,
-                "resource": "test.db"
+                "name": "1.19BDS",
+                "required_game_version": ">1.19",
+                "classes": [
+                    {
+                        "name": "测试分类",
+                        "db_file": "test.db",
+                        "description": "",
+                        "last_updated": 114514
+                    }
+                ]
             }
         ]
     },

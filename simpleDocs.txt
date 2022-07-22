@@ -18,10 +18,14 @@ status
 	1 维护中
 description 仓库简介
 root 需要填写的字段
-	classes 资源类型
-		[0] name 分类名字
-		[0] broadcast 是否允许客户端使用此分类
-		[0] resource 分类的资源文件下载链接
+	groups[0] 资源组，客户端只能选定一个资源组
+		name 资源组名称
+		required_game_version 至少需要的游戏版本
+		classes[0] 资源分类
+			name 分类名称
+			db_file 数据库下载链接
+			description 简单介绍
+			last_updated 最近更新时间戳
 multi 其他功能
 	SpeedTest 测速功能
 		enable 是否允许客户端对本仓库主动测速
@@ -35,13 +39,12 @@ multi 其他功能
 1. 链接
 支持不同的协议，写法也较多样。
 例：
-	如root.branches[0].resource，
-	写 test.db 将会在 <此仓库基链接>/classes/test.db 下载文件
+	如root.groups[0].classes[0].name
+	若不指定协议，写 test.db 将会在 <此仓库基链接>/groups/<GROUP_NAME>/test.db 下载文件
 	也可以指定协议，
 	目前支持 http(s), lanzou
 	如 https://www.example.com/test.db
-	或 lanzou://wqj8zhd
-	带提取码的蓝奏盘解析目前还有点奇怪问题，故暂不支持
+	或 lanzou://wqj8zhd，会直接下载该链接的文件
 
 2. 测速
 开启（推荐）有助于改善用户体验，而且对您的仓库利大于弊
