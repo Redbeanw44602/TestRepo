@@ -13,7 +13,6 @@ self.json
 format_version 100
 name 显示在客户端仓库列表中的名称
 identifier 设定后不可变动，仓库唯一uuid识别（镜像仓库也有独立的uuid）
-updated 最后一次更新的时间戳
 status
 	0 正常服务
 	1 维护中
