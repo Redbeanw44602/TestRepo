@@ -7,7 +7,7 @@
     "root": {
         "groups": [
             {
-                "name": "1.19BDS",
+                "name": "latest",
                 "required_game_version": ">1.19",
                 "classes": [
                     {
